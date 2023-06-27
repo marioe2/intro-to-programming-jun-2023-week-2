@@ -10,6 +10,9 @@ export const routes: Routes = [
     {
         path: 'account',
         component: BankAccountComponent
+    }, {
+        path: 'shopping',
+        loadChildren: () => import('./features/shopping-list/shopping-list.routes').then(m => m.SHOPPING_LIST_ROUTES)
     },
     {
         path: '**',
