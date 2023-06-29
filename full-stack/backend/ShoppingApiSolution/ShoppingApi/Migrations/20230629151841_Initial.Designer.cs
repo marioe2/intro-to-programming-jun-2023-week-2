@@ -12,8 +12,8 @@ using ShoppingApi.Data;
 namespace ShoppingApi.Migrations
 {
     [DbContext(typeof(ShoppingDataContext))]
-    [Migration("20230628185814_Shopping")]
-    partial class Shopping
+    [Migration("20230629151841_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

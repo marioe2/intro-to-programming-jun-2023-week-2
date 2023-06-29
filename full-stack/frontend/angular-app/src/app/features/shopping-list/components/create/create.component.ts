@@ -1,6 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { ListEvents } from '../../state/list.actions';
 
 @Component({
   selector: 'app-create',
@@ -10,8 +12,13 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent {
+  submitted = signal(false);
 
-  @Output() itemAdded = new EventEmitter<string>();
+  constructor(private store: Store) {
+
+  }
+
+  // @Output() itemAdded = new EventEmitter<string>();
 
   form = new FormGroup({
     description: new FormControl<string>('', {
@@ -26,12 +33,20 @@ export class CreateComponent {
 
   get description() { return this.form.controls.description }
 
-  addItem() {
+  addItem(elementYouWantToFocus: HTMLInputElement) {
+    this.submitted.set(true);
     if (this.form.valid) {
-      this.itemAdded.emit(this.description.value);
-    }
-    else {
-      console.log(this.form.controls.description.errors)
+      const payload = {
+        description: this.form.controls.description.value
+      }
+      this.store.dispatch(
+        ListEvents.itemsAdded({
+          payload,
+        }),
+      );
+      this.form.reset();
+      this.submitted.set(false);
+      elementYouWantToFocus.focus();
     }
   }
 }
