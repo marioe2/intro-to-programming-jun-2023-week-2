@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BankAccount } from 'src/app/services/bank-account.service';
 
 @Component({
   selector: 'app-heading',
@@ -9,5 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./heading.component.css']
 })
 export class HeadingComponent {
+
+
+  balance = inject(BankAccount).getBalance();
 
 }

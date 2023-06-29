@@ -1,0 +1,26 @@
+<section class="row">
+  <section class="col-2">
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="list"
+          [routerLinkActive]="['active']"
+          >Your Shopping List</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="create"
+          [routerLinkActive]="['active']"
+          >Add An Item</a
+        >
+      </li>
+    </ul>
+  </section>
+  <section class="col">
+    <app-create (itemAdded)="onItemAdded($event)" />
+    <app-list [list]="shoppingList()" />
+  </section>
+</section>

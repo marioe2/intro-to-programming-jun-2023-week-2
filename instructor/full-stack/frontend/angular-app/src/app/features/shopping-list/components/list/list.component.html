@@ -1,0 +1,10 @@
+<ul class="list-unstyled">
+    <li class="alert" [ngClass]="{'alert-success': item.purchased === false, 'alert-info': item.purchased}"
+        *ngFor="let item of list">
+        <span [ngClass]="{ 'purchased': item.purchased}">{{item.description}}</span>
+        <div *ngIf="item.purchased === false">
+            <button class="btn btn-sm btn-danger">X</button>
+        </div>
+    </li>
+
+</ul>

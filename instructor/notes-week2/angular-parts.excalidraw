@@ -1,0 +1,47 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "mb2LXA2ZIsUZUwUHh9Fmo",
+      "type": "text",
+      "x": 291,
+      "y": 173,
+      "width": 1265.625,
+      "height": 192,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1412858192,
+      "version": 337,
+      "versionNonce": 735441232,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1687872743763,
+      "link": null,
+      "locked": false,
+      "text": "Angular CLI Commands:\n    ng new - creates a new angular application\n    ng serve - compiles and runs your application locally at port 4200. ( -o will open your browser for you)\n    ng generate component COMPONENTNAME - will generate a component\n    ng build - will build your application for \"production\"\n\n\nComponents:",
+      "fontSize": 20,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 187,
+      "containerId": null,
+      "originalText": "Angular CLI Commands:\n    ng new - creates a new angular application\n    ng serve - compiles and runs your application locally at port 4200. ( -o will open your browser for you)\n    ng generate component COMPONENTNAME - will generate a component\n    ng build - will build your application for \"production\"\n\n\nComponents:",
+      "lineHeight": 1.2
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
